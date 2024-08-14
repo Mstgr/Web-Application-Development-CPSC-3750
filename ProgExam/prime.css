@@ -1,0 +1,61 @@
+/* The body element sets the font family, background color, and margins */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The container element sets the maximum width, margin, background color, padding, and box shadow */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* The input and button elements set the margin, padding, and font size */
+input,
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* The lists element sets the display and justify content */
+.lists {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* The list-container element sets the width, background color, padding, and border radius */
+.list-container {
+    width: 45%;
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* The ul element removes the default list style */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* The li element sets the margin */
+li {
+    margin: 5px 0;
+}
+
+/* The primeList element sets the color */
+#primeList {
+    color: green;
+}
+
+/* The nonPrimeList element sets the color */
+#nonPrimeList {
+    color: red;
+}

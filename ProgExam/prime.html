@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set up the basic page structure -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number List</title>
+    <link rel="stylesheet" href="prime.css">
+</head>
+
+<body>
+    
+    <!-- Load the common navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+    
+    <!-- Main content of the page -->
+    <div class="container">
+        <!-- Page header -->
+        <h1>Program Exam #1</h1>
+        <p>by Michael Steiger</p>
+        
+        <!-- User input and button -->
+        <input type="number" id="numberInput" placeholder="Enter a number" min="2">
+        <button id="startButton">START</button>
+        
+        <!-- List containers -->
+        <div class="lists">
+            <div class="list-container">
+                <!-- Prime number list -->
+                <h2>Prime Numbers</h2>
+                <ul id="primeList"></ul>
+                <button id="sumPrimeButton">SUM</button>
+                <div id="sumPrime"></div>
+            </div>
+            <div class="list-container">
+                <!-- Non-prime number list -->
+                <h2>Non-Prime Numbers</h2>
+                <ul id="nonPrimeList"></ul>
+                <button id="sumNonPrimeButton">SUM</button>
+                <div id="sumNonPrime"></div>
+            </div>
+        </div>
+    </div>
+    <script src="prime.js"></script>
+</body>
+
+</html>

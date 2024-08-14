@@ -1,0 +1,60 @@
+/*
+    Name: Michael Steiger
+    Date: July 20th 2024
+    ProgExam2: Word Count
+    File: styles.css
+*/
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Primary container for the content */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2b2c2e;
+    font-size: 1.2em;
+    padding: 15px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin: 5px;
+}
+
+/* Styling for buttons on hover */
+button:hover {
+    color: #007BFF;
+}
+
+/* Styling for scrollable list */
+.scrollable-list {
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Styling for drop area */
+#drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 100px;
+    text-align: center;
+}
+

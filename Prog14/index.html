@@ -1,0 +1,42 @@
+<!--
+    Name: Michael Steiger
+    Date: July 13th 2024
+    Prog14: PHP File I/O App
+    File: index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHP File I/O App</title>
+    <style src="style.css"></style>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- PHP File I/O App -->
+    <h1>Prog14:PHP File I/O App</h1>
+    <p>by Michael Steiger</p>
+    <!-- Form to process numbers -->
+    <form method="post" action="process_numbers.php">
+        <label for="numbers">Enter a list of numbers (comma-separated):</label><br><br>
+        <input type="text" id="numbers" name="numbers" required><br><br>
+        <button type="submit" name="check">CHECK THESE NUMBERS</button>
+    </form>
+    <br>
+    <!-- Buttons to display the contents of the .txt files -->
+    <button onclick="fetchResults('armstrong.txt', 'Armstrong Numbers')">ARMSTRONG</button>
+    <button onclick="fetchResults('fibonacci.txt', 'Fibonacci Numbers')">FIBONACCI</button>
+    <button onclick="fetchResults('prime.txt', 'Prime Numbers')">PRIME</button>
+    <button onclick="fetchResults('none.txt', 'None of the Above Numbers')">NONE</button>
+    <button onclick="resetFiles()">RESET</button>
+    <!-- Container to display the results -->
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

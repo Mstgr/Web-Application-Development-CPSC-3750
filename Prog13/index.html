@@ -1,0 +1,79 @@
+<!--
+    Name: Michael Steiger
+    Date: July 13th 2024
+    Prog13: AJAX & Handlebars
+    File: index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    For this assignment I used the code implementation from the first video
+    and combined it with the Handlebars code.
+    I kept the button from the first video, and the json file links.
+-->
+
+<head>
+    <title>Prog13: AJAX & Handlebars</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load the navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="center-content">
+        <h1>Prog13: AJAX & Handlebars</h1>
+        <h2>by Michael Steiger</h2>
+        <button id="btn">Show More Animals</button>
+    </div>
+
+    <div class="page-wrap">
+        <div id="animal-info"></div>
+    </div>
+
+    <!-- Here are my changes to use Google Handlebars-->
+    <script id="petsTemplate" type="text/x-handlebars-template">
+        {{#each this}}
+            <div class="pet">
+                <div class="info-column">
+                    <h2>{{name}} <span class="species">({{species}})</span></h2>
+
+                    {{#if foods.likes}}
+                        <h4 class="headline-bar">Likes</h4>
+                        <ul class="favorite-foods">
+                            {{#each foods.likes}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/if}}
+
+                    {{#if foods.dislikes}}
+                        <h4 class="headline-bar">Dislikes</h4>
+                        <ul class="favorite-foods">
+                            {{#each foods.dislikes}}
+                                <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script src="handlebars.js"></script>
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

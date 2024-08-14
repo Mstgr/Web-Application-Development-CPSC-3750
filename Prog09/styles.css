@@ -1,0 +1,184 @@
+/*
+    Name: Michael Steiger
+    Date: June 11th 2024
+    Prog09: Dynamic Business Cards
+    File: styles.css
+*/
+
+/* The body of the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252626;
+    color: #ffffff;
+}
+
+/* The main container for the page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* The header of the page */
+.header {
+    text-align: center;
+}
+
+/* The header h1 element */
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+/* The header p element */
+.header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* The header ul element */
+.header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* The header ul li element */
+.header ul li {
+    font-size: 1em;
+}
+
+/* The main container for the page */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    color: #ffffff;
+    background: #191B1B;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* The information form container */
+.information-form,
+/* The business cards container */
+.business-cards {
+    width: 48%;
+}
+
+/* The information form h2 element */
+.information-form h2,
+/* The business cards h2 element */
+.business-cards h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* The information form form element */
+.information-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* The information form label element */
+.information-form label {
+    margin-bottom: 5px;
+}
+
+/* The information form input element */
+.information-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 1em;
+}
+
+/* The information form submit button element */
+.information-form button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #519a9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* The information form submit button element on hover */
+.information-form button:hover {
+    background-color: #115D5F;
+}
+
+/* The business cards button element */
+.business-cards button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #519a9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* The business cards button element on hover */
+.business-cards button:hover {
+    background-color: #115D5F;
+}
+
+/* The container for the business cards */
+#cardsContainer {
+    margin-top: 20px;
+}
+
+/* Common Navbar */
+.navbar {
+    display: flex;
+    background-color: #1a1b1c;
+    color: white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.navbar li {
+    list-style-type: none;
+    position: relative;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1b1c;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown li {
+    margin-bottom: 5px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar li:hover .dropdown {
+    display: block;
+}

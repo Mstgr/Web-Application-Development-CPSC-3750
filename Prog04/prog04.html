@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog04: JavaScript Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <!-- Header section -->
+
+    <div class="header-box">
+        <h1>Prog04: JavaScript Events</h1>
+        <p>By Michael Steiger</p>
+    </div>
+
+    <!-- Button container section -->
+    <div class="button-container">
+        <button id="redButton" onmouseover="changeColor('red'); incrementHoverCount('red')"
+            onmouseout="resetColor('red')" onclick="changeBackground('red')">Red</button>
+        <button id="greenButton" onmouseover="changeColor('green'); incrementHoverCount('green')"
+            onmouseout="resetColor('green')" onclick="changeBackground('green')">Green</button>
+        <button id="blueButton" onmouseover="changeColor('blue'); incrementHoverCount('blue')"
+            onmouseout="resetColor('blue')" onclick="changeBackground('blue')">Blue</button>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer-box">
+        <h2>Counts</h2>
+        <div class="counts" id="count">
+            <div>Red Hover: <span id="redHoverCount">0</span> | Click: <span id="redCount">0</span></div>
+            <div>Green Hover: <span id="greenHoverCount">0</span> | Click: <span id="greenCount">0</span></div>
+            <div>Blue Hover: <span id="blueHoverCount">0</span> | Click: <span id="blueCount">0</span></div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript code section -->
+    <script src="prog04.js"></script>
+</body>
+
+</html>
+
+</html>

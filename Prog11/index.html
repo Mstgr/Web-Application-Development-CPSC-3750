@@ -1,0 +1,133 @@
+<!--
+    Name: Michael Steiger
+    Date: June 26th 2024
+    Prog11: jQuery
+    File: index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JQuery UI for the Datepicker, Accordion, and Progress Bar -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+
+        $(document).ready(function () {
+            // Mouseover and Mouseout effects
+            $("div").mouseover(function () {
+                $(this).css("background-color", "yellow");
+            }).mouseout(function () {
+                $(this).css("background-color", "");
+            });
+
+            // Fade out divs
+            $("#fadeDiv1").click(function () {
+                $("#div1").fadeOut();
+            });
+
+            $("#fadeDiv2").click(function () {
+                $("#div2").fadeOut();
+            });
+
+            $("#fadeDiv3").click(function () {
+                $("#div3").fadeOut();
+            });
+
+            // Date picker
+            $("#datepicker").datepicker();
+            // Accordion
+            $("#accordion").accordion();
+            // Progress bar
+            $("#progressbar").progressbar({
+                value: 0
+            });
+
+            // Make the Progress bar take 20 seconds to fill up
+            function progress() {
+                var val = $("#progressbar").progressbar("value") || 0;
+                $("#progressbar").progressbar("value", val + 5);
+                if (val < 100) {
+                    setTimeout(progress, 1000);
+                }
+            }
+
+            setTimeout(progress, 1000);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- This div contains the main title of the page -->
+    <h1>Welcome to My Homepage</h1>
+    <p>Modified by Michael Steiger</p>
+
+    <!-- This button triggers the fade out of div 1 -->
+    <button id="fadeDiv1">Fade Div 1</button>
+    <!-- This button triggers the fade out of div 2 -->
+    <button id="fadeDiv2">Fade Div 2</button>
+    <!-- This button triggers the fade out of div 3 -->
+    <button id="fadeDiv3">Fade Div 3</button>
+
+    <!-- This div contains two paragraphs and is styled with a border -->
+    <div id="div1" style="border: 1px solid black; margin-top: 10px;">
+        <p>A paragraph in div 1.</p>
+        <p>Another paragraph in div 1.</p>
+    </div>
+    <br>
+
+    <!-- This div contains two paragraphs and is styled with a border -->
+    <div id="div2" style="border: 1px solid black;">
+        <p>A paragraph in div 2.</p>
+        <p>Another paragraph in div 2.</p>
+    </div>
+    <br>
+
+    <!-- This div contains two paragraphs and is styled with a border -->
+    <div id="div3" style="border: 1px solid black;">
+        <p>A paragraph in div 3.</p>
+        <p>Another paragraph in div 3.</p>
+    </div>
+    <br>
+
+    <!-- This div is used for selecting a date -->
+    <h2>Date Picker</h2>
+    <div id="datepicker"></div>
+    <br>
+
+    <!-- This div contains three sections that can be expanded and collapsed -->
+    <div id="accordion">
+        <h3>Accordion Section 1</h3>
+        <div>
+            <p>Accordion Section 1 content.</p>
+        </div>
+        <h3>Accordion Section 2</h3>
+        <div>
+            <p>Accordion Section 2 content.</p>
+        </div>
+        <h3>Accordion Section 3</h3>
+        <div>
+            <p>Accordion Section 3 content.</p>
+        </div>
+    </div>
+    <br>
+
+    <!-- This div is used to show the progress of a task -->
+    <h2>Progress Bar</h2>
+    <div id="progressbar"></div>
+
+</body>
+
+</html>

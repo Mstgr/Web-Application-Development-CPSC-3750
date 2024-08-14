@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Steiger CPSC 3750 Website</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #2b2c2e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <header>
+        <h1>Welcome to Michael's CPSC 3750 Summer 2024 Website</h1>
+    </header>
+    <main>
+        <p>My name is Michael. This is my web site for CPSC 3750 Summer 2024.</p>
+        <img src="mainImage.jpg" alt="Profile Picture">
+        <p>I am a aspiring Web Developer. Here is my <a href="https://mstgr.github.io" target="_blank">portfolio</a>
+            website that I have already made in the past!</p>
+        <img src="codingImage.JPG" alt="Coding Image">
+        <section id="assignments">
+            <p>Here are links to programming assignments: </p>
+
+            <div>
+                <a href="Group01/GroupCSS1.html">Group01: CSS</a>
+            </div>
+            <div>
+                <a href="Group02/index.html">Group02: More CSS</a>
+            </div>
+            <div>
+                <a href="Group03/GroupEvents.html">Group03: Events</a>
+            </div>
+            <div>
+                <a href="/Group04/GroupAudio.html">Group04: Audio</a>
+            </div>
+            <div>
+                <a href="/Group05/hangman.html">Group05: Hangman</a>
+            </div>
+            <div>
+                <a href="/Group06/forms.html">Group06: Forms</a>
+            </div>
+            <div>
+                <a href="/Group07/car_selection.php">Group07: Sessions</a>
+            </div>
+            <div>
+                <a href="/Group08/index.html">Group08: Zipcode Distance</a>
+            </div>
+            <div>
+                <a href="/Group09/index.html">Group09: Dynamic Buttons</a>
+            </div>
+            <div>
+                <a href="Prog02/layout.html">Prog02: Basic Fixed Fluid Hybrid Layout</a>
+            </div>
+            <div>
+                <a href="Prog03/index.html">Prog03: Demo HTML & CSS</a>
+            </div>
+            <div>
+                <a href="Prog04/prog04.html">Prog04: JavaScript Events</a>
+            </div>
+            <div>
+                <a href="Prog05/helloworld.php">Prog05: PHP Helloworld</a>
+            </div>
+            <div>
+                <a href="Prog06/ButtonMove.html">Prog06: Moving Buttons</a>
+            </div>
+            <div>
+                <a href="Prog07/sort.html">Prog07: Javascript Sort</a>
+            </div>
+            <div>
+                <a href="Prog08/navbar.html">Prog08: Common Navbar</a>
+            </div>
+            <div>
+                <a href="Prog09/index.html">Prog09: Card Object</a>
+            </div>
+            <div>
+                <a href="/Prog10/keypress.html">Prog10: Keypress</a>
+            </div>
+            <div>
+                <a href="/Prog11/index.html">Prog11: jQuery</a>
+            </div>
+            <div>
+                <a href="/Prog12/livesearch.html">Prog12: AJAX & PHP</a>
+            </div>
+            <div>
+                <a href="/Prog13/index.html">Prog13: AJAX & Handlebars</a>
+            </div>
+            <div>
+                <a href="/Prog14/index.html">Prog14: PHP File I/O App</a>
+            </div>
+            <div>
+                <a href="/Prog15/index.html">Prog15: Integrate with DB</a>
+            </div>
+            <div>
+                <a href="/Prog16/UsabilityTestDoc.html">Prog16: Usability Test Results</a>
+            </div>
+            <div>
+                <a href="/ProgExam/prime.html">ProgExam: Prime Numbers</a>
+            </div>
+            <div>
+                <a href="/ProgExam2/index.html">ProgExam2: Word Count</a>
+            </div>
+            <div>
+                <a href="/Project1/index.html">Project1: Audio Changer</a>
+            </div>
+            <div>
+                <a href="/Project2/index.html">Project2: Collect App Phase 1</a>
+            </div>
+            <div>
+                <a href="/Project3/index.html">Project3: Collect App Phase 2</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Michael. All rights reserved.
+    </footer>
+</body>
+
+</html>

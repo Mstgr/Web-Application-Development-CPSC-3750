@@ -1,0 +1,70 @@
+<!-- 
+    Name: Michael Steiger
+    Date: June 7th 2024
+    Prog06: Moving Buttons
+    File: ButtonMove.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define the character encoding -->
+    <meta charset="UTF-8">
+    <!-- Set the initial scale of the viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the page -->
+    <title>Prog06: Moving Buttons</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Start of the body section -->
+
+<body>
+
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <!-- Page title -->
+    <h2>Prog06: Moving Buttons</h2>
+    <p>by Michael Steiger</p>
+
+    <!-- Control section -->
+    <div id="controls">
+        <!-- The dropdown list to select color -->
+        <select id="colorDropdown">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+        </select>
+        <!-- The button to add a new button -->
+        <button id="makeButton">Add Button</button>
+        <!-- The button to start or stop the movement of buttons -->
+        <button id="moveButton">MOVE</button>
+        <!-- The display of the total number of clicks -->
+        <div id="total">Total: 0</div>
+    </div>
+
+    <!-- The viewing area for buttons -->
+    <div id="viewingArea"></div>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

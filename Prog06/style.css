@@ -1,0 +1,66 @@
+/*
+    Name: Michael Steiger
+    Date: June 7th 2024
+    Prog06: Moving Buttons
+    File: style.css
+*/
+
+
+/* The main container of the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+/* The H2 element */
+h2 {
+    margin: 10px;
+}
+
+/* The P element */
+p {
+    margin: 0px;
+}
+
+/* The control section */
+#controls {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* The area to display the buttons */
+#viewingArea {
+    width: 75%;
+    height: 75vh;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+/* The style for the buttons */
+.button {
+    position: absolute;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* The display of the total clicks */
+#total {
+    color: black;
+    font-weight: bold;
+}
+

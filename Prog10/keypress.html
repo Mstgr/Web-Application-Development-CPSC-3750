@@ -1,0 +1,82 @@
+<!--
+
+    Name: Michael Steiger
+    Date: June 26th 2024
+    Prog10: Keypress
+    File: keypress.html
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Displaying Keypresses</title>
+    <script type="text/javascript">
+        function displayKey(e) {
+            // which key was pressed?
+            if (e.keyCode) {
+                var keycode = e.keyCode;
+            } else {
+                var keycode = e.which;
+            }
+            character = String.fromCharCode(keycode);
+
+            
+            // check if character is a vowel and change it to uppercase if so
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            if (vowels.includes(character.toLowerCase())) {
+                character = character.toUpperCase();
+            }
+
+            
+            // change page background to red when "R" or "r" is pressed
+            if (character.toUpperCase() === 'R') {
+                document.body.style.backgroundColor = 'red';
+                document.body.style.color = 'white';
+            }
+            
+            // change page background to green when "G" or "g" is pressed
+            if (character.toUpperCase() === 'G') {
+                document.body.style.backgroundColor = 'green';
+                document.body.style.color = 'white';
+            }
+            
+            // change page background to blue when "B" or "b" is pressed
+            if (character.toUpperCase() === 'B') {
+                document.body.style.backgroundColor = 'blue';
+                document.body.style.color = 'white';
+            }
+            
+
+            // find the object for the destination paragraph
+            var keysParagraph = document.getElementById('keys');
+
+            // add the character to the paragraph
+            keysParagraph.innerHTML += character;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+</head>
+
+<body onkeypress="displayKey(event)">
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1>Displaying Typed Characters</h1>
+    <p>This document includes a simple script that displays
+        the keys you type as a new paragraph below. Type a few keys
+        to try it. </p>
+    <div id="keys"></div>
+</body>
+
+</html>

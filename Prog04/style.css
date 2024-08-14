@@ -1,0 +1,81 @@
+/* Styling for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+/* Styling for header box */
+.header-box, .footer-box {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+/* Styling for headings */
+h1, h2 {
+    margin: 0;
+}
+
+/* Styling for button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for buttons */
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styling for hover effect on buttons */
+button:hover {
+    color: white;
+}
+
+/* Styling for red button */
+#redButton {
+    border-color: white;
+}
+
+/* Styling for hover effect on red button */
+#redButton:hover {
+    background-color: red;
+}
+
+/* Styling for green button */
+#greenButton {
+    border-color: white;
+}
+
+/* Styling for hover effect on green button */
+#greenButton:hover {
+    background-color: green;
+}
+
+/* Styling for blue button */
+#blueButton {
+    border-color: white;
+}
+
+/* Styling for hover effect on blue button */
+#blueButton:hover {
+    background-color: blue;
+}
+
+/* Styling for counts in footer */
+.footer-box .counts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

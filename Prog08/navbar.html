@@ -1,0 +1,158 @@
+<!--
+    Name: Michael Steiger
+    Date: June 7th 2024
+    Prog08: Common Navbar
+    File: navbar.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Common Navbar</title>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <section class="navbar-section">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="/profileLogo.jpg" alt="Logo">
+                <span>CPSC 3750 Michael Steiger</span>
+            </div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li>
+                    <a href="/index.html#assignments">Assignments</a>
+                    <ul class="dropdown">
+                        <li><a href="/Group01/GroupCSS1.html">Group01: CSS</a></li>
+                        <li><a href="/Group02/index.html">Group02: More CSS</a></li>
+                        <li><a href="/Group03/GroupEvents.html">Group03: Events</a></li>
+                        <li><a href="/Group04/GroupAudio.html">Group04: Audio</a></li>
+                        <li><a href="/Group05/hangman.html">Group05: Hangman</a></li>
+                        <li><a href="/Group06/forms.html">Group06: Forms</a></li>
+                        <li><a href="/Group07/car_selection.php">Group07: Sessions</a></li>
+                        <li><a href="/Group08/index.html">Group08: Zipcode Distance</a></li>
+                        <li><a href="/Group09/index.html">Group09: Dynamic Buttons</a></li>
+                        <li><a href="/Prog02/layout.html">Prog02: Basic Fixed Fluid Hybrid Layout</a></li>
+                        <li><a href="/Prog03/index.html">Prog03: Demo HTML & CSS</a></li>
+                        <li><a href="/Prog04/prog04.html">Prog04: JavaScript Events</a></li>
+                        <li><a href="/Prog05/helloworld.php">Prog05: PHP Helloworld</a></li>
+                        <li><a href="/Prog06/ButtonMove.html">Prog06: Moving Buttons</a></li>
+                        <li><a href="/Prog07/sort.html">Prog07: Javascript Sort</a></li>
+                        <li><a href="/Prog08/navbar.html">Prog08: Common Navbar</a></li>
+                        <li><a href="/Prog09/index.html">Prog09: Card Object</a></li>
+                        <li><a href="/Prog10/keypress.html">Prog10: Keypress</a></li>
+                        <li><a href="/Prog11/index.html">Prog11: jQuery</a></li>
+                        <li><a href="/Prog12/livesearch.html">Prog12: AJAX & PHP</a></li>
+                        <li><a href="/Prog13/index.html">Prog13: AJAX & Handlebars</a></li>
+                        <li><a href="/Prog14/index.html">Prog14: PHP File I/O App</a></li>
+                        <li><a href="/Prog15/index.html">Prog15: Integrate with DB</a></li>
+                        <li><a href="/Prog16/UsabilityTestDoc.html">Prog16: Usability Test Results</a></li>
+                        <li><a href="/ProgExam/prime.html">ProgExam: Prime Numbers</a></li>
+                        <li><a href="/ProgExam2/index.html">ProgExam2: Word Count</a></li>
+                        <li><a href="/Project1/index.html">Project1: Audio Changer</a></li>
+                        <li><a href="/Project2/index.html">Project2: Collect App Phase 1</a></li>
+                        <li><a href="/Project3/index.html">Project3: Collect App Phase 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <style>
+            /* Style for the main navbar container */
+            .navbar-section .navbar {
+                display: flex;
+                background-color: #1a1b1c;
+                color: white;
+                padding: 10px;
+                position: static;
+                font-family: 'Montserrat', sans-serif;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* Style for navbar links */
+            .navbar-section .navbar a {
+                color: white;
+                text-decoration: none;
+                margin-right: 10px;
+                font-size: 20px;
+                padding: 10px 15px;
+            }
+
+            /* Style for navbar list items */
+            .navbar-section .navbar li {
+                list-style-type: none;
+                margin-right: 10px;
+                padding: 0;
+                align-items: center;
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Hover effect for navbar links */
+            .navbar-section .navbar a:hover {
+                background-color: white;
+                color: black;
+                transition: all 0.3s ease-in-out;
+            }
+
+            /* Style for the navbar logo container */
+            .navbar-section .navbar-logo {
+                display: flex;
+                align-items: center;
+            }
+
+            /* Style for the navbar logo image */
+            .navbar-section .navbar-logo img {
+                height: 30px;
+                margin-right: 10px;
+                margin-left: 10px;
+                border-radius: 50%;
+            }
+
+            /* Style for the navbar logo text */
+            .navbar-section .navbar-logo span {
+                margin-left: 10px;
+                color: white;
+                font-size: 20px;
+
+            }
+
+            /* Style for the dropdown menu */
+            .navbar-section .dropdown {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #2b2c2e;
+                color: white;
+                padding: 10px;
+                z-index: 1;
+                width: 100%
+            }
+
+            /* Style for dropdown list items */
+            .navbar-section .dropdown li {
+                margin-bottom: 5px;
+            }
+
+            /* Style for dropdown links */
+            .navbar-section .dropdown li a {
+                color: white;
+                text-decoration: none;
+                margin-right: 0px;
+                padding: 5px;
+                font-size: 14px;
+                display: block;
+            }
+
+            /* Display dropdown on hover */
+            .navbar-section .navbar li:hover .dropdown {
+                display: block;
+            }
+        </style>
+    </section>
+</body>
+
+</html>

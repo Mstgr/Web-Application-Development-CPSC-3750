@@ -1,0 +1,83 @@
+/*
+    Name: Michael Steiger
+    Date: July 25th 2024
+    Prog15: Integrate with DB
+    File: style.css
+*/
+
+/* Styling for the overall page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the main container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Styling for the main title */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling for input and button elements */
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2b2c2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Styling for buttons on hover */
+button:hover {
+    color: #007BFF;
+}
+
+/* Styling for the navigation bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Styling for navigation bar items */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Styling for navigation bar links */
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Styling for navigation bar links on hover */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for search results */
+.results {
+    text-align: center;
+    margin-top: 20px;
+}

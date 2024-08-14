@@ -1,0 +1,12 @@
+/* Basic styles for the page to match the rest of the website */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.result {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}

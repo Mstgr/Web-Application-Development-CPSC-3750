@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo Fan Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Common Navbar-->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <header>
+        <h1>Cristiano Ronaldo</h1>
+        <p>by Michael Steiger</p>
+    </header>
+
+    <!--
+        Although my page is not the most visually impressive, I did manage to include all things necessary as outlined in the instructions
+        and the rubric. 
+        I made sure to add:
+        - hyperlinks (within the page on the nav and quick links in the aside)
+        - I organized the page clearly as depicted in figure 2.4
+        - the style sheet is for all html files in this folder.
+    -->
+    
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="mailto:example@mail.com">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <header>
+                <h2>About Cristiano Ronaldo</h2>
+            </header>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <br>
+                <p>Nam aliquam sem et tortor. Tempor id eu nisl nunc mi ipsum faucibus vitae aliquet. At lectus urna duis convallis convallis tellus. 
+                    Elementum curabitur vitae nunc sed velit dignissim sodales ut. Tincidunt eget nullam non nisi est sit amet facilisis. Nec tincidunt 
+                    praesent semper feugiat nibh sed. Nisl vel pretium lectus quam id leo. Massa vitae tortor condimentum lacinia quis vel eros donec ac. 
+                    Viverra suspendisse potenti nullam ac tortor. Ac auctor augue mauris augue neque gravida in fermentum et. Tristique magna sit amet 
+                    purus gravida. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Vitae turpis massa sed elementum. Dolor sit amet 
+                    consectetur adipiscing elit duis tristique sollicitudin. At risus viverra adipiscing at in tellus. Orci porta non pulvinar neque 
+                    laoreet suspendisse interdum. Venenatis tellus in metus vulputate eu scelerisque felis. Aliquam etiam erat velit scelerisque in 
+                    dictum. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus.</p>
+            </div>
+            <footer>
+                <p>Section Footer</p>
+            </footer>
+        </section>
+        <aside>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="https://www.espn.com/soccer/player/_/id/22774/cristiano-ronaldo" target="_blank">ESPN Profile</a></li>
+                <li><a href="https://www.instagram.com/cristiano/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/watch?v=b2QFKIwQFpc" target="_blank">Youtube Highlights</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Michael Steiger. All rights reserved.</p>
+    </footer>
+</body>
+</html>

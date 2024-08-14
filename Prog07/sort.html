@@ -1,0 +1,45 @@
+<!--
+    Name: Michael Steiger
+    Date: June 7th 2024
+    Prog07: Javascript Sort
+    File: sort.html`
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sort Demo</title>
+    <script type="text/javascript" src="sort.js"></script>
+</head>
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <!-- Section for the form to add names -->
+    <h1>Sorting String Arrays (Sort Demo)</h1>
+    <p>Modified by Michael Steiger</p>
+    <p>Enter two or more names in the field below, and the sorted list of names will appear in the textarea.</p>
+    
+    <form name="theform">
+        Name:
+        <input type="text" name="newname" size="20">
+        <input type="button" name="addname" value="Add" onclick="SortNames();">
+        <br>
+        <!-- Section for the sorted names -->
+        <h2>Sorted Names</h2>
+        <textarea cols="60" rows="10" name="sorted">
+        The sorted names will appear here.
+        </textarea>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!--
+    Name: Michael Steiger
+    Date: July 12th 2024
+    Prog12: AJAX & PHP
+    File: livesearch.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prog12: AJAX & PHP</title>
+    <script type="text/javascript" src="ajax.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: inline-block;
+            text-align: left;
+        }
+        
+    </style>
+    <!-- Load the navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1>AJAX Live Search Example</h1>
+    <p>by Michael Steiger</p>
+    <p><strong>Search for:</strong>
+        <input type="text" size="40" id="searchlive" onkeyup="showResult(this.value)">
+    </p>
+    <div class="container" id="results">
+        <ul id="list">
+            <li>[Search results will display here.]</li>
+        </ul>
+    </div>
+</body>
+
+</html>

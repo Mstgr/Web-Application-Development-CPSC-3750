@@ -1,0 +1,54 @@
+<!--
+    Name: Michael Steiger
+    Date: June 13th 2024
+    Project 1: Audio Changer
+    File: index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1: Audio PLayer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Header contains the title, author, and instructions -->
+    <div class="container">
+        <h1>Project 1: Audio Player</h1>
+        <p>by Michael Steiger</p>
+    </div>
+    <div class="container">
+        <h2 id="current-time">Current Time: 0:00</h2>
+        <audio id="audioPlayer" src="mozart.mp3" controls autoplay></audio>
+        <div id="controls">
+            <button id="rewind"><i class="fas fa-backward"></i> 5s</button>
+            <button id="playPause"><i class="fas fa-play"></i></button>
+            <button id="forward">5s  <i class="fas fa-forward"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Playlist Titles</h2>
+        <p>Add or remove titles from the playlist</p>
+        <p>Top title is selected by default</p>
+        <div id="titles">
+            <!-- Titles will be dynamically inserted here -->
+        </div>
+    
+
+        <div id="title-management">
+            <button id="addTitle">Add Title</button>
+            <button id="removeTitle">Remove Title</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/349742a549.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

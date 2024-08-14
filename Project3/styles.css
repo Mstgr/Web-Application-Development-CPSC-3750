@@ -1,0 +1,198 @@
+/* Main container for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper for main content and user container */
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Primary container for the page content */
+.container {
+    flex: 3;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* User info container */
+.user-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 8px;
+    max-height: 400px;
+}
+
+/* Navigation bar at the top of the page */
+nav {
+    background-color: #2b2c2e;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List of navigation links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Individual navigation links */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+/* Styling for navigation links on hover */
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Styling for main heading */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling for form inputs and buttons */
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2b2c2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Styling for buttons on hover */
+button:hover {
+    color: #007BFF;
+}
+
+/* Styling for results section */
+#results, #stats, #country-details, #user-list {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Styling for results table */
+#results table, #collection table, #user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Styling for table headers and cells */
+#results th, #results td, #collection th, #collection td, #user-list th, #user-list td {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+/* Styling for table headers */
+#results th, #collection th, #user-list th {
+    background-color: #f4f4f4;
+}
+
+/* Center text in cells */
+#collection td, #user-list td {
+    text-align: center;
+}
+
+/* Add spacing between table rows */
+#collection tr, #user-list tr {
+    margin-bottom: 10px;
+}
+
+/* Add spacing around flag images */
+#collection img, #user-list img {
+    margin-left: 10px;
+}
+
+/* Styling for back button */
+#back-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Link styling */
+p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for details and stats sections */
+#country-details, #stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Styling for individual details and stats sections */
+#country-details .left, #country-details .right, #stats .left, #stats .right {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Styling for left details section */
+#country-details .left {
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+/* Styling for right details section */
+#country-details .right {
+    margin-left: 35px;
+    padding-left: 30px;
+}
+
+/* Styling for country flag */
+#country-details img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Add spacing around flag images in country details */
+#country-details img {
+    margin-left: 10px;
+}

@@ -1,0 +1,95 @@
+/*
+    Name: Michael Steiger
+    Date: July 13th 2024
+    Project 1: Audio Changer
+    File: styles.css
+*/
+
+/* Styling for the body element */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+audio {
+    margin: 20px 0;
+}
+
+/* Styling for the controls section */
+#controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for buttons inside the titles section */
+#titles button {
+    display: block;
+    margin: 5px 0;
+    width: 200px;
+    background-color: #2b2c2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#titles button.active {
+    background-color: #2b2c2e;
+    color: #007BFF;
+}
+
+/* Styling for the title management section */
+#title-management {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Styling for form inputs and buttons */
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2b2c2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#titles button:hover, button:hover {
+    color: #007BFF;
+}
+
+/* Primary container for the page content */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}

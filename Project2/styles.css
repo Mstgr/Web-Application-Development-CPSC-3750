@@ -1,0 +1,153 @@
+/*
+    Name: Michael Steiger
+    Date: July 19th 2024
+    Project 2: Collection App Phase 1
+    File: styles.css
+*/
+ 
+/* Main container for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Primary container for the page content */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Navigation bar at the top of the page */
+nav {
+    background-color: #2b2c2e;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List of navigation links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Individual navigation links */
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+/* Styling for navigation links on hover */
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Styling for main heading */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling for form inputs and buttons */
+input, button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for buttons */
+button {
+    background-color: #2b2c2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Styling for buttons on hover */
+button:hover {
+    color: #007BFF;
+}
+
+/* Styling for results section */
+#results, #stats, #country-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Styling for results table */
+#results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styling for table headers and cells */
+#results table, #results th, #results td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Styling for table headers */
+#results th {
+    background-color: #f4f4f4;
+}
+
+/* Styling for details and stats sections */
+#country-details, #stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling for individual details and stats sections */
+#country-details .left, #country-details .right, #stats .left, #stats .right {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Styling for left details section */
+#country-details .left {
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+/* Styling for right details section */
+#country-details .right{
+    margin-left: 35px;
+    padding-left: 30px;
+}
+
+/* Styling for country flag */
+#country-details img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Styling for back button */
+#back-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+

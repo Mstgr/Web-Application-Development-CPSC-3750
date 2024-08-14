@@ -1,0 +1,43 @@
+<!-- search.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project3: Collection App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    <div class="wrapper">
+        <div class="container">
+            <!-- Main content -->
+            <nav>
+                <ul>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="stats.html">Statistics</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a id="view-collection-button">My Collection</a></li>
+                </ul>
+            </nav>
+            <h1>Search for Countries</h1>
+            <p>and Collect them!</p>
+            <!-- Search form -->
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Enter country name" />
+                <button type="submit">Search</button>
+            </form>
+            <div id="results"></div>
+        </div>
+        <div class="user-container" id="user-container">
+            <!-- User info will be loaded here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Showcase by Michael Steiger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<style>
+
+/* 
+    For learning purposes I also added a couple more things that were mentioned
+    on the W3schools website like all the different selector types. 
+    All items that were asked for are all included below.
+*/
+
+/* Universal selector to apply box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selector to style the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ID selector for header */
+#header {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #333333;
+}
+
+/* ID selector for footer */
+#footer {
+    background-color: #522D80;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Class selector for content sections */
+.content {
+    padding: 20px;
+    /* RGB */
+    background-color: rgb(255, 255, 255); 
+    margin: 10px;
+    /* HSL color */
+    border: 2px solid hsl(120, 100%, 25%);
+    /* Rounded border */
+    border-radius: 10px;
+    color: #333333;
+}
+
+/* Class selector with fixed background image */
+.fixed-background {
+    background-image: url('https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png');
+    /* Background attachment fixed */
+    background-attachment: fixed;
+
+    background-position: center; /* Center the background image */
+    background-size: 50% auto; /* Make the image smaller (50% of the container's width) */
+
+    /* Background repeat */
+    background-repeat: no-repeat;
+    height: 200px;
+    padding: 20px;
+    border: 2px dashed #f66733;
+    border-width: 2px;
+    border-top: 4px solid #000000;
+    margin: 10px 0;
+}
+
+/* Grouping selector for headings */
+h1, h2, h3 {
+    color: #522D80;
+}
+
+/* Element selector to add padding and margins to paragraphs */
+p {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* Specific class to adjust width and height */
+.specific-box {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 20px; 
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+</style>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <!-- Header with ID selector -->
+    <div id="header">
+        <h1>Group01: CSS</h1>
+        <p>by Michael Steiger</p>
+    </div>
+
+    <!-- Content with Class selector -->
+    <div class="content">
+        <h2>CSS Selectors</h2>
+        <p>This page demonstrates various CSS selectors and properties.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </div>
+
+    <!-- Fixed background section -->
+    <div class="fixed-background">
+        <p>This section has a fixed background image, which is a the CSS logo.</p>
+        <p>Pretty cool.</p>
+    </div>
+
+    <!-- Another content box to show the universal selector -->
+    <div class="content">
+        <h2>More Content</h2>
+        <p>This is another content section to show different styles.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </div>
+
+    <!-- Footer with ID selector -->
+    <div id="footer">
+        <p>&copy; 2024 Michael Steiger. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

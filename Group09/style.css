@@ -1,0 +1,55 @@
+/*
+   Name: Michael Steiger
+   Date: July 12th 2024
+   Group09: Dynamic Buttons
+   File: style.css
+*/
+/* Added some basic styles for the page to match the rest of the website */
+body {
+   background-color: #ffffff;
+   font-family: Arial, sans-serif;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   margin: 0;
+}
+
+/* Moved the h1 and p to the center of the page */
+h1, p {
+   text-align: center;
+}
+
+/* Made the Button container bigger and a different color so the user could see it*/
+#buttonContainer {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   padding: 20px;
+   background-color: #737272;
+   width: 100%;
+   height: 300px;
+   box-sizing: border-box;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+/* Moved the text inside the button container to the center of the button */
+#buttonContainer p {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0;
+   font-size: 18px;
+   color: #585353;
+}
+
+/* Added some padding and font size to the button */
+button {
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+}

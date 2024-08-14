@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group03: Events</title>
+    <style>
+        /* Body element styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #D6DBDF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header element styles */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Container element for each event section */
+        .event-container {
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Container element for drag event section */
+        .event-container-drag {
+            position: relative;
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            min-height: 500px;
+        }
+
+        /* Draggable element styles */
+        #dragItem {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(58, 12, 75);
+            color: white;
+            line-height: 100px;
+            text-align: center;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        /* Animation element styles */
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(192, 113, 29);
+            animation: none;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* Keyframes for animation */
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(500px);
+            }
+        }
+
+        /* Button element styles */
+        button {
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        /* Hover styles for button */
+        button:hover {
+            background-color: #2980B9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+
+    <h1>Group03: Events</h1>
+    <p>by Michael Steiger</p>
+
+    <!-- Event sections -->
+    <!-- Animation Event -->
+    <!-- Animation events onanimationstart, onanimationiteration, onanimationend were used here. 
+         I also added JavaScript functions for the buttons, and events to make it more interactive.-->
+    <div class="event-container">
+        <h2>Animation Event</h2>
+        <div class="animation-box" onanimationstart="animationStarted()" onanimationiteration="animationIterated()"
+            onanimationend="animationEnded()">
+            Animation
+        </div>
+        <div>
+            <input type="text" id="animationStatus" value="Animation: Not Started" readonly>
+            <input type="text" id="animationCount" value="Iterations: 0" readonly>
+            <input type="text" id="animationEndStatus" value="Animation: Not Ended" readonly>
+        </div>
+        <button onclick="startAnimation()">Start Animation</button>
+    </div>
+
+    <!-- Drag Event -->
+    <!-- Drag events ondragstart, ondrag, ondragend were used here. 
+        -->
+    <div class="event-container-drag">
+        <h2>Drag Event</h2>
+        <div id="dragItem" draggable="true" ondragstart="dragStart(event)" ondrag="dragging(event)"
+            ondragend="dragEnd(event)">
+            Drag Me!
+        </div>
+    </div>
+
+    <!-- Input Event -->
+    <!-- Input events oninput, onfocus, onblur were used here. -->
+    <div class="event-container">
+        <h2>Input Event</h2>
+        <input type="text" oninput="handleInputEvent(this)" placeholder="Type here...">
+        <div>
+            <input type="text" id="inputStatus" value="Input: No Input" readonly>
+        </div>
+    </div>
+
+    <!-- Mouse Event -->
+    <!-- Mouse events onmouseover, onmouseout, onclick were used here. -->
+    <div class="event-container">
+        <h2>Mouse Event</h2>
+        <button onmouseover="mouseOver()" onmouseout="mouseOut()" onclick="mouseClick()">Mouse Events Button</button>
+        <div>
+            <input type="text" id="mouseoverStatus" value="Mouse: Not Over" readonly>
+            <input type="text" id="mouseoutStatus" value="Mouse: Not Out" readonly>
+            <input type="text" id="clickCount" value="Clicks: 0" readonly>
+        </div>
+    </div>
+
+    <!-- Focus Event -->
+    <!-- Focus events onfocus, onblur were used here. -->
+    <div class="event-container">
+        <h2>Focus Event</h2>
+        <input type="text" onfocus="focusGained()" onblur="focusLost()" placeholder="Focus on me...">
+        <div>
+            <input id="focusStatus" value="Focus: Not Focused" readonly>
+        </div>
+    </div>
+
+    <script>
+
+        // Animation Event Functions
+        let iterationCount = 0;
+
+        function animationStarted() {
+            document.getElementById('animationStatus').value = "Animation: Started";
+            document.getElementById('animationEndStatus').value = "Animation: Not Ended";
+            animationIterated();
+        }
+
+        function animationIterated() {
+            iterationCount++;
+            document.getElementById('animationCount').value = "Iterations: " + iterationCount;
+        }
+
+        function animationEnded() {
+            document.getElementById('animationStatus').value = "Animation: Not Started";
+            document.getElementById('animationEndStatus').value = "Animation: Ended";
+        }
+
+        function startAnimation() {
+            const animationBox = document.querySelector('.animation-box');
+            animationBox.style.animation = 'none';
+            setTimeout(() => {
+                animationBox.style.animation = 'slide 3s 1';
+            }, 10);
+
+        }
+        // Drag Event Functions
+        function dragStart(event) {
+            event.dataTransfer.setData("text/plain", null);
+        }
+
+        function dragEnd(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var dragItem = document.getElementById('dragItem');
+            dragItem.style.left = x + 'px';
+            dragItem.style.top = y + 'px';
+        }
+
+        // Input Event Functions
+        function handleInputEvent(inputElement) {
+            const status = inputElement.value ? "Input: There is input!" : "Input: No Input";
+            document.getElementById('inputStatus').value = status;
+        }
+
+        // Mouse Event Functions
+        let clickCounter = 0;
+
+        function mouseOver() {
+            document.getElementById('mouseoverStatus').value = "Mouse: Over";
+            document.getElementById('mouseoutStatus').value = "Mouse: Not Out";
+        }
+
+        function mouseOut() {
+            document.getElementById('mouseoverStatus').value = "Mouse: Not Over";
+            document.getElementById('mouseoutStatus').value = "Mouse: Out";
+        }
+
+        function mouseClick() {
+            clickCounter++;
+            document.getElementById('clickCount').value = "Clicks: " + clickCounter;
+        }
+
+        // Focus Event Functions
+        function focusGained() {
+            const inputField = document.querySelector('input[placeholder="Focus on me..."]');
+            inputField.style.backgroundColor = '#D6EAF8'; // Light blue background when focused
+            document.getElementById('focusStatus').value = 'Focus: Focused';
+        }
+
+        function focusLost() {
+            const inputField = document.querySelector('input[placeholder="Focus on me..."]');
+            inputField.style.backgroundColor = ''; // Revert to default background color
+            document.getElementById('focusStatus').value = 'Focus: Not Focused';
+        }
+
+    </script>
+</body>
+
+</html>

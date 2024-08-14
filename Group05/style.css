@@ -1,0 +1,66 @@
+/*
+    Name: Michael Steiger
+    Date: July 11 2024
+    Program: Group05: Hangman
+    File: style.css
+*/
+
+/* Set overall styles for the body */
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+}
+
+/* Set styles for the word to guess */
+#wordToGuess {
+   margin: 20px;
+   font-size: 24px;
+}
+
+/* Set styles for the gallows image */
+#gallows {
+   margin: 20px auto;
+   height: 500px;
+   width: 300px;
+   position: relative;
+   background: url('/image.jpeg') no-repeat;
+   background-position: 0 0;
+}
+
+/* Set common styles for each gallows part */
+.gallow-part {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: none;
+}
+
+/* Set styles for the letter buttons */
+#letters {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 5px;
+   justify-content: center;
+}
+
+/* Set styles for each letter button */
+#letters button {
+   margin: 5px;
+   padding: 10px;
+   width: 100%;
+   font-size: 18px;
+   cursor: pointer;
+}
+
+/* Set styles for the wrong letters display */
+#wrongLetters {
+   margin: 20px;
+   font-size: 18px;
+   color: red;
+}
+
+/* Set styles for hidden elements */
+.hidden {
+   visibility: hidden;
+}
+

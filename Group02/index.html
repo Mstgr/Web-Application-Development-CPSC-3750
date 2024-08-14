@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/349742a549.js" crossorigin="anonymous"></script>
+  <!-- This is my version of Group02: More CSS 
+  This was very helpful, and I enjoyed implementing all necessary elements.
+  By Michael Steiger -->
+</head>
+<body>
+  <!-- Common Navigation Bar -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+  </script>
+  <!-- Navigation bar -->
+  <nav class="navbar1">
+    <ul class="navbar-items1">
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#lists"><i class="fas fa-list"></i> Lists</a></li>
+      <li><a href="#tables"><i class="fas fa-table"></i> Tables</a></li>
+      <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home section -->
+  <header class="header" id="home">
+    <h1>Group02: More CSS</h1>
+    <p>By Michael Steiger</p>
+  </header>
+
+  <!-- Main content section -->
+  <main class="content">
+    <!-- Text content -->
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <!-- Lists section -->
+    <section class="lists" id="lists">
+      <h2>Lists</h2>
+      <div class="unordered-list">
+        <h3>Unordered List</h3>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+      <div class="ordered-list">
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Tables section -->
+    <section class="tables" id="tables">
+      <h2>Tables</h2>
+      <div class="regular-table">
+        <h3>Regular Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+            </tr>
+            <tr>
+              <td>Data 4</td>
+              <td>Data 5</td>
+              <td>Data 6</td>
+            </tr>
+            <tr>
+              <td>Data 7</td>
+              <td>Data 8</td>
+              <td>Data 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="responsive-table">
+        <h3>Responsive Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+            </tr>
+            <tr>
+              <td>Data 4</td>
+              <td>Data 5</td>
+              <td>Data 6</td>
+            </tr>
+            <tr>
+              <td>Data 7</td>
+              <td>Data 8</td>
+              <td>Data 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Image section -->
+    <section class="image-box">
+      <h2>Image with Floating Text</h2>
+      <div class="image-content">
+        <img src="stockimage1.png" alt="Sample Image">
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, nibh ac hendrerit viverra, leo sapien laoreet justo, ac venenatis velit metus eget sapien. Nullam quis nisl quis quam tincidunt aliquet. Vivamus consequat velit ac erat fermentum, sit amet consequat metus varius. Integer pharetra bibendum dictum. Integer sed nisi eu ligula luctus lacinia. Sed venenatis magna sit amet sapien dignissim, non facilisis urna sollicitudin. Fusce at urna magna. Suspendisse potenti.</p>
+      </div>
+    </section>
+
+    <!-- Image gallery section -->
+    <section class="image-gallery" id="gallery">
+      <h2>Image Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="sampleimage2.png" alt="Gallery Image 1">
+          <p>Sample Caption 1</p>
+        </div>
+        <div class="gallery-item">
+          <img src="sampleimage3.png" alt="Gallery Image 2">
+          <p>Sample Caption 2</p>
+        </div>
+        <div class="gallery-item">
+          <img src="sampleimage4.png" alt="Gallery Image 3">
+          <p>Sample Caption 3</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer class="footer">
+    <div class="footer-box">
+      <div class="copyright">
+        &copy; 2024 Michael Steiger. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

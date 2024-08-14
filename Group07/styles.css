@@ -1,0 +1,21 @@
+/*
+    Name: Michael Steiger
+    Date: July 12th 2024
+    Group07: Sessions
+    File: styles.css
+*/
+/* Set the font family and margin for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+/* Set css for the form */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}

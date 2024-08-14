@@ -1,0 +1,101 @@
+<!-- 
+    Name: Michael Steiger
+    Date: July 12th 2024
+    Group06: Forms
+    File: forms.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group06: Forms</title>
+    <style src="style.css"></style>  
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+    
+    <h1>Group06: Forms</h1>
+    <p>by Michael Steiger</p>
+
+    <form action="form_processor.php" method="post" enctype="multipart/form-data">
+
+        <!-- Text Input -->
+        <div class="form-element">
+            <label for="text">Text Input:</label>
+            <input type="text" id="text" name="text">
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-element">
+            <label for="textarea">Textarea:</label>
+            <textarea id="textarea" name="textarea" rows="4"></textarea>
+        </div>
+
+        <!-- Hidden Data -->
+        <input type="hidden" name="hiddenData" value="hiddenValue">
+
+        <!-- Password Input -->
+        <div class="form-element">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <!-- Array of Check Boxes -->
+        <div class="form-element">
+            <label>Check Boxes:</label>
+            <input type="checkbox" id="checkbox1" name="checkbox[]" value="Option1">
+            <label for="checkbox1">Option 1</label><br>
+            <input type="checkbox" id="checkbox2" name="checkbox[]" value="Option2">
+            <label for="checkbox2">Option 2</label><br>
+            <input type="checkbox" id="checkbox3" name="checkbox[]" value="Option3">
+            <label for="checkbox3">Option 3</label>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-element">
+            <label>Radio Buttons:</label>
+            <input type="radio" id="radio1" name="radio" value="Option1">
+            <label for="radio1">Option 1</label><br>
+            <input type="radio" id="radio2" name="radio" value="Option2">
+            <label for="radio2">Option 2</label><br>
+            <input type="radio" id="radio3" name="radio" value="Option3">
+            <label for="radio3">Option 3</label>
+        </div>
+
+        <!-- Selection List -->
+        <div class="form-element">
+            <label for="select">Selection List:</label>
+            <select id="select" name="select">
+                <option value="Option1">Option 1</option>
+                <option value="Option2">Option 2</option>
+                <option value="Option3">Option 3</option>
+            </select>
+        </div>
+
+        <!-- File Input -->
+        <div class="form-element">
+            <label for="file">File Input:</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <!-- URL Input -->
+        <div class="form-element">
+            <label for="url">URL Input:</label>
+            <input type="url" id="url" name="url">
+        </div>
+
+        <!-- Hidden field to track form submission -->
+        <input type="hidden" name="formSubmitted" value="true">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

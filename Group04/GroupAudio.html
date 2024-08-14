@@ -1,0 +1,117 @@
+<!--
+    Name: Michael Steiger
+    Date: June 26th 2024
+    Group04: Audio
+    File: GroupAudio.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Group04 Audio</title>
+    <style>
+        /* Style the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .control-panel {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // Event listener for when the DOM content has been loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the elements needed
+            var audio = document.getElementById("myAudio");
+            var played = document.getElementById("played");
+            var paused = document.getElementById("paused");
+            var volumeDisplay = document.getElementById("volumeDisplay");
+            var durationDisplay = document.getElementById("durationDisplay");
+            var currentTimeDisplay = document.getElementById("currentTimeDisplay");
+
+            // Event listener for when the audio starts playing
+            audio.addEventListener("play", function () {
+                played.textContent = "Audio is playing.";
+                paused.textContent = "";
+            });
+
+            // Event listener for when the audio is paused
+            audio.addEventListener("pause", function () {
+                paused.textContent = "Audio is paused.";
+                played.textContent = "";
+            });
+
+            // Event listener for when the volume of the audio changes
+            audio.addEventListener("volumechange", function () {
+                volumeDisplay.textContent = "Volume: " + audio.volume;
+            });
+
+            // Event listener for when the time of the audio updates
+            audio.addEventListener("timeupdate", function () {
+                currentTimeDisplay.textContent = "Current Time: " + audio.currentTime.toFixed(2) + "s";
+            });
+
+            // Event listener for when the metadata of the audio is loaded
+            audio.addEventListener("loadedmetadata", function () {
+                durationDisplay.textContent = "Duration: " + audio.duration.toFixed(2) + "s";
+            });
+
+            // Event listener for when the value of the volume slider changes
+            document.getElementById("volumeSlider").addEventListener("input", function () {
+                audio.volume = this.value;
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading navbar.html', error));
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Common Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <h1>Group04: Audio</h1>
+    <p>by Michael Steiger</p>
+    <div class="control-panel">
+        <label>
+            <button onclick="document.getElementById('myAudio').play()">Play Audio</button>
+            <button onclick="document.getElementById('myAudio').pause()">Pause Audio</button>
+        </label>
+
+        <label>
+            Volume: <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </label>
+    </div>
+
+    <audio id="myAudio" controls>
+        <!-- Audio example from W3Schools -->
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Audio information EACH ELEMENT LABELED CLEARLY-->
+    <div id="audioInfo">
+        <p id="played"></p>
+        <p id="paused"></p>
+        <p id="volumeDisplay">Volume: 1</p>
+        <p id="durationDisplay">Duration: </p>
+        <p id="currentTimeDisplay">Current Time: 0.00s</p>
+    </div>
+
+</body>
+
+</html>
+

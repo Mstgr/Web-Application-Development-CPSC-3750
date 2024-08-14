@@ -1,0 +1,65 @@
+/*
+    Name: Michael Steiger
+    Date: July 12th 2024
+    Group06: Forms
+    File: styles.css
+*/
+ /* Set the font family and margin for the body */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 20px;
+ }
+
+ /* Set the max-width, margin, padding, border, border-radius, and background color for the form */
+ form {
+     max-width: 600px;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background-color: #f9f9f9;
+ }
+
+ /* Set the margin bottom for form elements */
+ .form-element {
+     margin-bottom: 15px;
+ }
+
+ /* Set the display and margin bottom for labels */
+ .form-element label {
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ /* Set the width, padding, and box-sizing for form elements */
+ .form-element input,
+ .form-element textarea,
+ .form-element select {
+     width: 100%;
+     padding: 8px;
+     box-sizing: border-box;
+ }
+
+ /* Set the text-align for headings */
+ h1,
+ p {
+     text-align: center;
+ }
+
+ /* Styling for the form submission results */
+ .form-result {
+     max-width: 600px;
+     margin: auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background-color: #f9f9f9;
+ }
+
+ .form-result div {
+     margin-bottom: 15px;
+ }
+
+ .form-result label {
+     font-weight: bold;
+ }

@@ -1,0 +1,80 @@
+/*
+    Name: Michael Steiger
+    Date: July 18th 2024
+    Group08: Zipcode Distance
+    File: styles.css
+*/
+
+/* Styling for the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the container element */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Styling for the h1 element */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Styling for the input and button elements */
+input, button {
+    width: calc(100% - 22px);
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for the button element */
+button {
+    background-color: #5adbb5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for the button element on hover */
+button:hover {
+    background-color: #5dbea3;
+}
+
+/* Styling for the results section */
+.results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styling for the h2 element in the results section */
+.results h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Styling for the p element in the results section */
+.results p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Styling for the button element in the results section */
+.results button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin-top: 20px;
+}
+
